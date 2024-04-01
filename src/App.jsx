@@ -1,14 +1,22 @@
 import React from 'react';
 import Post from './components/Post';
+import Form from './components/Form';
+import Feed from './components/Feed';
+import {useState} from "react"
 
 function App(){
+
+    let handleNewSubmission = (event) => {
+      setFavLinks([...favLinks, data])
+    }
+  
   return(
     <div>
-      <h1>Fakebook!</h1>
+      <h1>Social Media</h1>
 
-        {/* CreatePostForm */}
+        <Form onNewSubmit={handleNewSubmission} />
 
-        {/* Feed */}
+        <Feed posts={favLinks} />
 
         <Post content="This is a test post!" />
         <Post content="This is another test post!" />

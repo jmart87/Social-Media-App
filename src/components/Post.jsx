@@ -11,15 +11,13 @@ function Post(props){
         
     return(
         <div>
-        <h3>{props.content}</h3>
-
+            <h3>{props.content}</h3>
             <p>Likes: {likes}</p>
             <button onClick={handleLike}>Like</button>
             <p>Comments:</p>
             <Comment content="This is a test comment!" />
             <Comment content="This is another test comment!" />
             <Comment content="This is yet another test comment!" />
-
         </div>
     )
 }
